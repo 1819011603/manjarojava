@@ -24,4 +24,12 @@ public  class Pair<U,T>{
     public void setValue(T value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "key=" + key +
+                ", value=" + value +
+                '}';
+    }
 }
