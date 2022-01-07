@@ -17,6 +17,18 @@ public class ListNode {
     public String toString() {
         return "ListNode{" +
                 "val=" + val +
+                ", next=" + next +
                 '}';
+    }
+
+    public  static  ListNode arrayToList(Integer[] integers){
+        if(integers.length == 0)return  null;
+        ListNode head = new ListNode(integers[0]);
+        ListNode cur = head;
+        for(int i = 1; i < integers.length; i++){
+            cur.next = new ListNode(integers[i]);
+            cur = cur.next;
+        }
+        return  head;
     }
 }
